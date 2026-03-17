@@ -1,0 +1,164 @@
+# Healthcare Dataset – Data Cleaning Documentation (Excel-Based)
+
+## 1. Introduction
+
+This document outlines the complete data cleaning process performed on the healthcare dataset using Microsoft Excel. The objective was to improve data quality, remove inconsistencies, and prepare the dataset for analysis.
+
+---
+
+## 2. Dataset Overview
+
+* **Total Records:** 2335 rows
+* **Total Columns:** 6 columns
+* **Original Columns:**
+
+  * Customer ID
+  * First Name
+  * Middle Name
+  * Last Name
+  * Unnamed: 4
+  * Unnamed: 5
+
+---
+
+## 3. Data Cleaning Steps (Performed in Excel)
+
+### Step 1: Initial Data Inspection
+
+* Opened the dataset in Excel.
+* Reviewed data using filters and sorting.
+* Checked for blank cells, inconsistent entries, and unwanted columns.
+
+**Observation:**
+
+* Two columns (`Unnamed: 4`, `Unnamed: 5`) contained mostly empty values.
+
+---
+
+### Step 2: Removing Unnecessary Columns
+
+* Selected and deleted columns `Unnamed: 4` and `Unnamed: 5`.
+
+**Reason:**
+
+* These columns did not contain meaningful or usable data.
+
+---
+
+### Step 3: Handling Missing Values
+
+* Applied filters to identify blank cells in each column.
+
+**Observation:**
+
+* No significant missing values in key columns.
+
+**Action Taken:**
+
+* No imputation required as essential fields were complete.
+
+---
+
+### Step 4: Renaming Columns
+
+* Renamed column headers for clarity and consistency:
+
+  * Customer ID → customer_id
+  * First Name → first_name
+  * Middle Name → middle_name
+  * Last Name → last_name
+
+**Reason:**
+
+* Standardized naming improves readability and compatibility for analysis.
+
+---
+
+### Step 5: Removing Duplicates
+
+* Used Excel feature: **Data → Remove Duplicates**.
+
+**Action Taken:**
+
+* Removed duplicate rows based on all columns.
+
+**Reason:**
+
+* Ensures data accuracy and avoids duplication in analysis.
+
+---
+
+### Step 6: Cleaning Text Data
+
+* Removed extra spaces using:
+
+  * `TRIM()` function
+* Standardized text format using:
+
+  * `PROPER()` function for names
+
+**Example Formula:**
+
+* `=PROPER(TRIM(A2))`
+
+**Result:**
+
+* Consistent capitalization and no unnecessary spaces.
+
+---
+
+### Step 7: Data Consistency Check
+
+* Verified:
+
+  * Uniform formatting across all records
+  * No blank rows
+  * No irregular text entries
+
+---
+
+### Step 8: Final Validation
+
+* Checked dataset size after cleaning.
+* Ensured:
+
+  * Only relevant columns remain
+  * Clean and structured data
+
+---
+
+## 4. Final Cleaned Dataset Structure
+
+* **Columns:**
+
+  * customer_id
+  * first_name
+  * middle_name
+  * last_name
+
+* **Total Rows:** 2335 (after cleaning, assuming minimal duplicates removed)
+
+---
+
+## 5. Conclusion
+
+The dataset was successfully cleaned using Excel by removing irrelevant columns, handling duplicates, and standardizing text fields. The data is now consistent, structured, and ready for further analysis or visualization.
+
+---
+
+## 6. Tools Used
+
+* Microsoft Excel
+
+---
+
+## 7. Key Excel Features Utilized
+
+* Filters & Sorting
+* Remove Duplicates Tool
+* TRIM() Function
+* PROPER() Function
+
+---
+
+**End of Document**
